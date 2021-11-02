@@ -1,20 +1,15 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 const Schema = mongoose.Schema;
-
-
 
 const RetiroSchema = new Schema({
   descripcion: {
     type: String,
-    required: true
+    required: true,
   },
   estado: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 });
 
-
-
-
-module.exports = mongoose.model('Retiro', RetiroSchema);
+module.exports = mongoose.model("Retiro", RetiroSchema);
