@@ -2,7 +2,9 @@ import express from 'express';
 const router = express.Router();
 import RetiroController from '../controllers/retiro.controller';
 import ClienteController from '../controllers/cliente.controller';
+import MensajeController from '../controllers/MensajeController'
 
+router.get('/', MensajeController.getMensaje)
 router.post('/save-retiro', RetiroController.saveRetiro);
 router.get('/retiro/:id', RetiroController.getRetiro);
 router.get('/retiros', RetiroController.getRetiros);
