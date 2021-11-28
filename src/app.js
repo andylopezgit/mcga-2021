@@ -10,6 +10,6 @@ config(app);
 // Router
 router(app);
 
-app.listen(process.env.PORT, () =>
+app.listen(process.env.PORT || '0.0.0.0', () =>
   console.log(`El servidor ha sido inicializado: http://${process.env.HOST}:${process.env.PORT}`)
 );
