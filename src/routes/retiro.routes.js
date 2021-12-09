@@ -16,8 +16,8 @@ router.delete('/delete-retiro/:id', RetiroController.deleteRetiro);
 router.get('/clientes', ClienteController.getClientes);
 router.get('/cliente/:id', ClienteController.getCliente);
 router.post('/save-cliente', ClienteController.saveCliente);
-router.put('/update-retiro/:id', ClienteController.updatedCliente)
-router.delete('/delete-retiro/:id', ClienteController.deleteCliente)
+router.put('/update-cliente/:id', ClienteController.updatedCliente)
+router.delete('/delete-cliente/:id', ClienteController.deleteCliente)
 
 router.post('/login', LoginController.getToken)
 
