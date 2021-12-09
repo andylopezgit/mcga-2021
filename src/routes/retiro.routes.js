@@ -1,8 +1,10 @@
 import express from 'express';
 const router = express.Router();
 import RetiroController from '../controllers/retiro.controller';
-import ClienteController from '../controllers/cliente.controller';
+import ClienteController from '../controllers/Cliente.controller';
 import MensajeController from '../controllers/MensajeController'
+import LoginController from "../controllers/LoginController"
+import RegistroController from '../controllers/Registro.controller'
 
 router.get('/', MensajeController.getMensaje)
 router.post('/save-retiro', RetiroController.saveRetiro);
@@ -16,5 +18,10 @@ router.get('/cliente/:id', ClienteController.getCliente);
 router.post('/save-cliente', ClienteController.saveCliente);
 router.put('/update-retiro/:id', ClienteController.updatedCliente)
 router.delete('/delete-retiro/:id', ClienteController.deleteCliente)
+
+router.post('/login', LoginController.getToken)
+
+router.post('/registro', RegistroController.saveUsuario)
+router.get('/usuarios', RegistroController.getUsuarios)
 
 export default router;

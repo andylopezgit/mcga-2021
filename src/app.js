@@ -2,6 +2,7 @@ import express from "express";
 import config from "./config";
 import router from './router'
 import "./database"
+import Jwt  from "jsonwebtoken";
 const app = express();
 
 // Config

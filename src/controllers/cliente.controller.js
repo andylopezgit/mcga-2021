@@ -1,12 +1,14 @@
 import Cliente from "..//models/cliente.model";
 
 let ClienteController = {
-  getClientes: async (res) => {
+
+  getClientes: async (req, res) => {
     try {
-      const clientes = Cliente.find();
+      let msj = 'prueba'
+      const clientes = await Cliente.find();
       res
         .status(200)
-        .json(cliente);
+        .json(clientes);
     } catch (error) {
       res
       console.log(error)
@@ -51,7 +53,7 @@ let ClienteController = {
   deleteCliente: async (req, res) => {
     const _id = req.params.id;
     try {
-      const revomedcliente = await cliente.findByIdAndDelete({_id});
+      const revomedcliente = await Cliente.findByIdAndDelete({ _id });
 
       if (!revomedcliente) {
         return res.status(404).json({
@@ -76,7 +78,7 @@ let ClienteController = {
       const updatedCliente = await Cliente.findByIdAndUpdate(
         _id,
         body,
-        {new: true});
+        { new: true });
 
       if (!updatedCliente) {
         return res.status(404).json({

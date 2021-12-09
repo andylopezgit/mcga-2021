@@ -9,9 +9,9 @@ let RetiroController = {
   getRetiros: async (req, res) => {
     try {
       const retiro = await Retiro.find();
-     res
-     .status(200)
-      .json(retiro);
+      res
+        .status(200)
+        .json(retiro);
     } catch (error) {
       res
       console.log(error)
@@ -20,7 +20,7 @@ let RetiroController = {
   saveRetiro: async (req, res) => {
     const body = req.body
     console.log(body)
-   
+
     try {
       const savedRetiro = await Retiro.create(body);
       res
@@ -37,7 +37,7 @@ let RetiroController = {
   getRetiro: async (req, res) => {
     const _id = req.params.id;
     try {
-      const retiro = await Retiro.findOne({_id});
+      const retiro = await Retiro.findOne({ _id });
       res
         .status(200)
         .json(retiro)
@@ -52,7 +52,7 @@ let RetiroController = {
   deleteRetiro: async (req, res) => {
     const _id = req.params.id;
     try {
-      const revomedRetiro = await Retiro.findByIdAndDelete({_id});
+      const revomedRetiro = await Retiro.findByIdAndDelete({ _id });
 
       if (!revomedRetiro) {
         return res.status(404).json({
@@ -71,12 +71,13 @@ let RetiroController = {
   },
   updatedRetiro: async (req, res) => {
     const _id = req.params.id;
-    const body = req.body;
+    
+    ;
     try {
       const updatedRetiro = await Retiro.findByIdAndUpdate(
         _id,
         body,
-        {new: true});
+        { new: true });
 
       if (!updatedRetiro) {
         return res.status(404).json({
