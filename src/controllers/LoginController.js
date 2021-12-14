@@ -1,6 +1,7 @@
 import { json } from "body-parser";
 import Jwt from "jsonwebtoken";
 import Usuario from '../models/usuario.model'
+import key from '../config/config.js'
 
 
 let LoginController = {
@@ -14,7 +15,7 @@ let LoginController = {
             const userNombre = userDb.nombre
             const userPass = userDb.pass
             if (user.nombre === userNombre && user.pass === userPass) {
-                Jwt.sign({ user: user }, 'secretKey', (err, token) => {
+                Jwt.sign({ user: user }, key, (err, token) => {
                     res.json({ token: token })
                 })
             } else {
