@@ -1,11 +1,14 @@
 import express from 'express';
 const router = express.Router();
+
 import jwtMiddle from '../middleware/jwtMiddle';
 import RetiroController from '../controllers/retiro.controller';
 import ClienteController from '../controllers/cliente.controller';
 import MensajeController from '../controllers/MensajeController'
 import LoginController from "../controllers/LoginController"
 import RegistroController from '../controllers/Registro.controller'
+
+
 
 router.get('/', jwtMiddle, MensajeController.getMensaje)
 router.post('/save-retiro', jwtMiddle, RetiroController.saveRetiro);
