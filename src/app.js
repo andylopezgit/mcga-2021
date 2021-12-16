@@ -7,6 +7,7 @@ const app = express();
 
 // Config
 config(app);
+app.use(cors())
 
 // Router
 router(app);

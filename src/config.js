@@ -1,6 +1,7 @@
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
+import cors from 'cors';
 const express = require("express")
 
 export default (app) => {
