@@ -9,7 +9,7 @@ import MensajeController from '../controllers/MensajeController'
 import LoginController from "../controllers/LoginController"
 import RegistroController from '../controllers/Registro.controller'
 
-router.get('/', jwtMiddle, MensajeController.getMensaje)
+router.get('/', MensajeController.getMensaje)
 router.post('/save-retiro', jwtMiddle, RetiroController.saveRetiro);
 router.get('/retiro/:id', RetiroController.getRetiro);
 router.get('/retiros', jwtMiddle, RetiroController.getRetiros);
