@@ -3,31 +3,16 @@ import config from "./config";
 import router from './router'
 import "./database"
 import Jwt  from "jsonwebtoken";
+import cors from 'cors'
 const app = express();
-const cors = require('cors');
 
 
 // Config
 config(app);
 app.use(cors())
-app.use((req, res, next) => {
-  console.log('desde middleware')
-  res.header('Access-Control-Allow-Origin','http://localhost:8080', '*');
-  res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-  res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
-  console.log('estoy desde los headers')
-  next();
+app.use(() => {
+  console.log('abajo de cors')
 })
-app.use((req, res, next) => {
-  console.log('estoy desde los headers')
-  res.header('Access-Control-Allow-Origin','http://localhost:8080', '*');
-  res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-  res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
-  console.log('estoy desde los headers')
-  next();
-});
 
 
 // Router
