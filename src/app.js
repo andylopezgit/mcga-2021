@@ -3,6 +3,7 @@ import config from "./config";
 import router from './router'
 import "./database"
 import Jwt  from "jsonwebtoken";
+import cors from 'cors';
 const app = express();
 
 // Config
