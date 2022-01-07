@@ -10,9 +10,9 @@ const app = express();
 // Config
 config(app);
 app.use(cors())
-app.use(() => {
-  console.log('abajo de cors')
-})
+//app.use(() => {
+  //console.log('abajo de cors')
+//})
 
 
 // Router
