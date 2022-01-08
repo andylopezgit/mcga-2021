@@ -8,7 +8,7 @@ const options = {
 
 mongoose.Promise = global.Promise;
 mongoose
-  .connect(uri, options)
+  .connect(uri)
   .then(() => {
     console.log("Conectado a MongoDB");
   })
