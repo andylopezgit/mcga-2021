@@ -2,8 +2,12 @@ import express from "express";
 import config from "./config";
 import router from './router'
 import "./database"
+const cors = require('cors');
 
 const app = express();
+
+app.use(express.json());
+app.use(cors());
 
 
 config(app);

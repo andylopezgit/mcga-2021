@@ -1,5 +1,4 @@
 import { json } from "body-parser";
-import Jwt from "jsonwebtoken";
 import Usuario from '../models/usuario.model'
 import key from '../config/config.js'
 

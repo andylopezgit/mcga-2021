@@ -1,4 +1,3 @@
-import { json } from 'body-parser'
 import Usuario from '../models/usuario.model'
 
 
