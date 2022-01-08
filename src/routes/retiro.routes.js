@@ -1,7 +1,6 @@
 import express from 'express';
 const router = express.Router();
 
-import jwtMiddle from '../middleware/jwtMiddle';
 import RetiroController from '../controllers/retiro.controller';
 import ClienteController from '../controllers/cliente.controller';
 import MensajeController from '../controllers/MensajeController';
