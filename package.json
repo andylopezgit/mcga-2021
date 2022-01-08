@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r dotenv/config src/app.js --exec babel-node"
+    "dev": "nodemon -r dotenv/config src/app.js --exec babel-node",
+    "start": "node src/app.js --exec babel-node"
   },
   "keywords": [],
   "author": "",
