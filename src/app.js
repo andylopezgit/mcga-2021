@@ -2,17 +2,12 @@ import express from "express";
 import config from "./config";
 import router from './router'
 import "./database"
-import Jwt  from "jsonwebtoken";
-import cors from 'cors'
+
 const app = express();
 
 
-// Config
 config(app);
-// app.use(cors())
-//app.use(() => {
-  //console.log('abajo de cors')
-//})
+
 
 
 // Router
