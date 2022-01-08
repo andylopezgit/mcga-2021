@@ -13,5 +13,5 @@ mongoose
     console.log("Conectado a MongoDB");
   })
   .catch(err => {
-    console.error(err);
+    console.error(err, "error con promesa DB");
   });
