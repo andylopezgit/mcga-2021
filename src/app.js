@@ -8,7 +8,13 @@ import prueba from '../src/middleware/pruebaMiddleware.js'
 
 const app = express();
 
-app.use(cors())
+var corsOptions = {
+  origin: 'http://localhost:8080',
+  optionsSuccessStatus: 200, // For legacy browser support
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+}
+
+app.use(cors(corsOptions))
 app.use(prueba)
 
 // Config
