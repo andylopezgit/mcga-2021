@@ -1,9 +1,15 @@
+import cors from 'cors';
 import express from "express";
 import config from "./config";
 import router from './router'
 import "./database"
 import Jwt  from "jsonwebtoken";
+import prueba from '../src/middleware/pruebaMiddleware.js'
+
 const app = express();
+
+app.use(cors())
+app.use(prueba)
 
 // Config
 config(app);
