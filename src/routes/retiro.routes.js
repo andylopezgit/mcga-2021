@@ -11,7 +11,7 @@ import RegistroController from '../controllers/Registro.controller'
 router.get('/', MensajeController.getMensaje)
 router.post('/save-retiro', jwtMiddle, RetiroController.saveRetiro);
 router.get('/retiro/:id', RetiroController.getRetiro);
-router.get('/retiros', RetiroController.getRetiros);
+router.get('/retiros', jwtMiddle, RetiroController.getRetiros);
 router.put('/update-retiro/:id', jwtMiddle, RetiroController.updatedRetiro);
 router.delete('/delete-retiro/:id', RetiroController.deleteRetiro);
 
