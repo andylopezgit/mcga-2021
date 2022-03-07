@@ -71,6 +71,7 @@ let RetiroController = {
   },
   updatedRetiro: async (req, res) => {
     const _id = req.params.id;
+    const body = req.body;
     
     ;
     try {
