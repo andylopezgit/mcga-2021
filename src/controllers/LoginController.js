@@ -33,6 +33,10 @@ let LoginController = {
         /* Jwt.sign({user: user}, 'secretKey', (err, token) => {
             res.json({token: token})
         } ) */
+    },
+
+    deleteToken: (req, res) => {
+        res.json('borrar token')
     }
 
 

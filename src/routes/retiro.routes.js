@@ -22,6 +22,7 @@ router.put('/update-cliente/:id', jwtMiddle, ClienteController.updatedCliente)
 router.delete('/delete-cliente/:id', jwtMiddle, ClienteController.deleteCliente)
 
 router.post('/login', LoginController.getToken)
+router.post('/logout', LoginController.deleteToken)
 
 router.post('/registro', RegistroController.saveUsuario)
 router.get('/usuarios', jwtMiddle, RegistroController.getUsuarios)
